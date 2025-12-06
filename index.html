@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BikeBattles</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    canvas {
+      border: 2px solid #555;
+      background: #222;
+      display: block;
+    }
+    #startScreen {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="startScreen">
+    <h1>BikeBattles</h1>
+    <button id="startButton">Start Game</button>
+  </div>
+  <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+  <script src="game.js"></script>
+</body>
+</html>
