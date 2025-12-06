@@ -45,3 +45,58 @@ This project is inspired by a minimal HTML5 template for games (e.g. games using
 
 Feel free to fork and extend as you like. Pull requests / suggestions welcome!
 
+
+## CHALLENGES FACED
+1. ImpactJS is not free anymore
+ImpactJS used to be open-source but now it requires a paid license, and you cannot download it legally for free.
+So students cannot access the engine required to follow Chapter 4.
+
+2. Weltmeister Level Editor only works with old local servers
+The tutorial requires Weltmeister, which only runs when:
+•	PHP 5.x or older is installed
+•	A local Apache server (XAMPP/MAMP) is running
+Modern systems do not support these old versions, so the editor fails to open or cannot save maps.
+
+3. The whole project requires very old JavaScript ecosystem
+The book uses:
+•	ES5 JavaScript
+•	Deprecated browser APIs
+•	Canvas rendering methods from ~2012
+Modern browsers often break this setup.
+This means the sample code does not run properly in today’s environment.
+
+4. Missing “media” assets from the book
+To build the game, you must copy the provided:
+•	Player sprites
+•	Zombie sprites
+•	Bullet graphics
+•	Tilesets
+Without the full “media” folder, the game throws errors like:
+404 – file not found: /media/player.png
+
+5. No built-in game engine — you must code everything manually
+Unlike Unity or Godot, ImpactJS requires writing everything in code:
+•	Player physics
+•	Collision
+•	Monster AI
+•	Weapons
+•	Animations
+•	Level loading logic
+Beginners find this very difficult and time-consuming.
+
+6. The book uses a file structure that fails in modern OS setups
+For example:
+/lib/game/entities/
+/lib/game/levels/
+If any folder is missing or named incorrectly, the game does not load.
+Students commonly face errors like “cannot find module game.entities.player”.
+
+7. Very fragile setup & many points of failure
+The engine breaks if:
+•	A comma is missing
+•	A module name is wrong
+•	A file path is mismatched
+•	A sprite dimension is incorrect
+This makes the whole project hard to execute smoothly.
+
+
